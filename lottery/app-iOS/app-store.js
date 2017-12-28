@@ -4,11 +4,12 @@ import {createLogger} from 'redux-logger'
 
 
 import ChangeTabReducers from './reducers/changeTab_reducer'
-
+import LoginReducers from './reducers/login_reducer'
 
 
 const reducer = combineReducers({
     changeTabState: ChangeTabReducers,
+    loginState: LoginReducers,
 })
 
 const middleware = [thunk]

@@ -33,7 +33,7 @@ class Tab extends Component {
 
     constructor(props){
         super(props);
-        this.props.actions.changeTab("home")
+        this.props.actions.changeTab("found")
     }
 
     _renderTabarItems(selectedTab,icon,selectedIcon,Comp,tabName){
@@ -66,14 +66,6 @@ class Tab extends Component {
                 {this._renderTabarItems('我的','jdd_buy_mine','jdd_buy_mine_press',Mine,'mine')}
             </TabBarIOS>
         );
-    }
-
-    _click(){
-        this.props.navigator.push({
-            component:Detail,
-            title:'hahah',
-            barTintColor:'#fff',
-        })
     }
 }
 

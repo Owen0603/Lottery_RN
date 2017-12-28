@@ -14,6 +14,8 @@ import {
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import Tab from './app-iOS/containers/tab'
+import LoginView from './app-iOS/containers/Mine/login-nav'
+import {showLogin} from "./app-iOS/actions/login-action"
 
 
 class App extends Component{
@@ -30,15 +32,18 @@ class App extends Component{
 
     render(){
         return(
-            <NavigatorIOS
-                titleTextColor = '#666666'
-                style = {{ flex:1}}
-                navigationBarHidden = {true}
-                initialRoute = {{
-                    component:Tab,
-                    title:'首页'
-                }}
-            />
+            <View style = {{flex:1}}>
+                <NavigatorIOS
+                    titleTextColor = '#666666'
+                    style = {{ flex:1}}
+                    navigationBarHidden = {true}
+                    initialRoute = {{
+                        component:Tab,
+                        title:'首页'
+                    }}
+                />
+                <LoginView/>
+            </View>
         )
     }
 }

@@ -271,7 +271,7 @@ class home extends Component{
         });
         setTimeout(()=>{
             this._fetchData()
-        },500);
+        },200);
     }
 
 
